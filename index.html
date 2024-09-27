@@ -1,0 +1,2941 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking Site</title>
+
+  <!--- bootstrape cdn start -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!--- bootstrape cdn end -->
+
+  <!-- font awesome cdn start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- font awesome cdn start -->
+
+  <!-- sweper js start-->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <!-- sweper js end-->
+
+  <!--external css link start -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--external css link end -->
+
+  <!--external javascript-->
+  <script src="assets/java/java.js"></script>
+
+</head>
+
+<body>
+  <!-- header navigation start-->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg border border-5 border-white bg-white fixed-top ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/booking_logo.png" alt="logo" width="40px" height="40px" >
+          
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+
+            <!--search start-->
+
+           <div class="search_box d-flex " >          
+            <div class="input-group border border-2 rounded-3 mx-3 shadow-lg bg-white border-white ">
+              <span class="input-group-text border-0  bg-white " id="basic-addon1">
+                <i class="fa-solid fa-location-dot text-success "></i>
+              </span>
+              <input list="browsers" name="browser" class="form-control shadow-none  border-0 " placeholder="City" >
+              <datalist id="browsers" >
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
+              
+              <span class="input-group-text border-0 bg-white" id="basic-addon1">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control shadow-none border-0 " placeholder="Institution" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+           </div>
+            <!--search start end -->
+
+           
+            
+            <!--Home menu start -->
+            <li class="nav-item text-center">
+              <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-house-laptop"></i>
+               <span>Home</span>
+              </a>
+            </li>
+            <!--Home menu end -->
+            <!--Instituute menu start -->
+            <li class="nav-item text-center">
+              <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-building-columns"></i>
+               <span>Institute</span>
+              </a>
+            </li>
+            <!--Instituute menu end -->
+
+
+            <!--Login menu start -->
+            <li class="nav-item">
+              <a class="nav-link fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Login</span>
+              </a>
+            </li>
+            <!--Login menu end -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="fw-bolder"> 
+                  <i class="fa-solid fa-circle-user"></i>
+                   Sing
+                  </span>
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ajay Kumar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-hourglass"></i>
+                    <span>History</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span> Logout</span>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+            
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!-- header navigation end-->
+
+  <section class="box_menu" >
+    <div class="container " style="padding-top: 20%;">
+      <div class="text-center text-white " >
+
+          <h1 class="fw-bold  " >   <img src="assets/img/booking_logo.png" alt="_blank" width="50px" height="50px" > StudentsPartner</h1>
+
+       
+        <p class="h4 fw-bold " >Get Scholarship on your Coaching Fee</p>
+        
+      </div> 
+      <div class="row" >
+        <div class="col-lg-8 mx-auto " >
+          <div class="search_box d-flex "  >  
+           
+            <div class="input-group mb-3 border border-2 rounded-3 mx-3 ">
+              <span class="input-group-text border-0  bg-white " id="basic-addon1">
+                <i class="fa-solid fa-location-dot text-success "></i>
+              </span>
+              <input list="browsers" name="browser" class="form-control form-control-lg shadow-none form-select  border-0 " placeholder="Mumbai,India" >
+              <datalist id="browsers" >
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
+              <div class="vr" > </div>
+              
+              <span class="input-group-text border-0 bg-white" id="basic-addon1">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control form-control-lg shadow-none border-0 " placeholder=" Search Institution" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+    
+    
+           </div>
+
+        </div>
+
+
+      </div>
+     
+
+    </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- shadow card categeries -->
+  <section class="catageries" >
+
+    <div class="container" >
+      <div class="text-center shadow-sm bg-white border border-5 border-white p-5 rounded-3 ">
+        <div class="row align-items-start">
+    
+          <div class="col-lg-2">
+            <a class="text-center fit_icon " href="#">
+              <span style="font-size: 30px;" class="text-primary  ">
+                <i class="fa-solid fa-book-open-reader text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class=" text-success fw-bolder">Institution</p>
+    
+            </a>
+          </div>
+    
+          <div class="col-lg-2">
+            <a class="text-center fit_icon" href="#">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-graduation-cap text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>Home Tuition</small> </p>
+    
+            </a>
+    
+          </div>
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-person-military-pointing text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" ><small>Libraries</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-person-walking text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>Test Series</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-mobile-button text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>Scholarship</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-computer text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>Internship</small> </p>
+    
+            </div>
+          </div>
+     
+        </div>
+        <!--2nd shadow booking-->
+       
+        <div class="row align-items-start">
+    
+          <div class="col-lg-2">
+            <a class="text-center fit_icon " href="#">
+              <span style="font-size: 30px;" class="">
+                <i class="fa-solid fa-book-bookmark text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success"> <small>Crazy Community</small> </p>
+    
+            </a>
+          </div>
+    
+          <div class="col-lg-2">
+            <a class="text-center fit_icon" href="#">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-book text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>Hostels</small> </p>
+    
+            </a>
+    
+          </div>
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-person-walking-luggage text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" ><small>Mess</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-stapler text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>M.A</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-scale-unbalanced-flip text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>M.com</small> </p>
+    
+            </div>
+          </div>
+    
+          <div class="col-lg-2">
+            <div class="text-center fit_icon ">
+              <span style="font-size: 30px;">
+                <i class="fa-solid fa-head-side-virus text-success bg_icon px-3 py-3 rounded-pill "></i>
+              </span>
+              <p class="text-success" > <small>M.sc</small> </p>
+    
+            </div>
+          </div>
+    
+        </div>
+      
+    
+      </div>
+
+    </div>
+   
+  </section>
+
+
+
+  <!---All institution offer -->
+
+  <section class=" container offer_cat  bg-white  shadow-lg bg-white ">
+    <div class=" institution_offer border border-5 border-white rounded-3 ">
+      <ul class="nav nav-tabs nav-underline" id="myTab" role="tablist">
+        <p class="h2 fw-bold px-2 ">Offers</p>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+           <small class="offer_menu px-2 " >All offer</small>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+            type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+            <small class="offer_menu px-2">Home Tution</small>
+          </button>
+        </li>
+
+        <li class="nav-item " role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+            <small class="offer_menu px-2">Libraries</small>
+          </button>
+        </li>
+
+        <li class="nav-item " role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+            <small class="offer_menu px-2">Test Series</small>
+          </button>
+        </li>
+
+        <li class="nav-item " role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+            <small class="offer_menu px-2">Hotel</small>
+          
+          </button>
+        </li>
+
+
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+          tabindex="0">
+
+          <!--home contant start-->
+          <div class="insitution_fit pt-3">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>
+                              <i class="fa-solid fa-fire"></i>
+                              4 relevant courses Open for admission
+                            </span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                        
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+                
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--home contant end-->
+
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+          <div class="insitution_fit pt-3">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+                
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>
+                              <i class="fa-brands fa-free-code-camp"></i>
+                              4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+          <div class="insitution_fit pt-3">
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+                
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+            <div class="row">
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="col-6">
+                <a href="#">
+                  <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4 col-lg-4 ">
+                        <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                          height="110x">
+  
+                      </div>
+                      <div class="col-md-8 col-lg-8 ">
+                        <div class="card-body">
+                          <span class="card-title text-uppercase">Ajay Kumar</span>
+                          <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                           <small class="text-secondary">
+                            <i class="fa-solid fa-location-dot"></i>
+                           <span> Matwari, Hazaribagh</span>
+                            </small> 
+                            <br>
+                           <small >
+                           
+                              <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                                <span>5.0</span>
+                                <i class="fa-solid fa-star"></i>
+                              </button>
+                              <span class="text-secondary" > (1 Rating ).Excellent</span>
+                            
+                            </small>
+                                               
+  
+                        </div>
+  
+                      </div>
+                      <div class="courses" >
+                        
+                          <small class="text-danger" >
+    
+                            <span>4 relevant courses Open for admission</span>
+    
+                          </small>
+                     
+                      </div>
+  
+                      <div class="d-flex" >
+                        <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-
+                        2 cat_bord border-0 px-2" >Engineering</button>
+                        <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+  
+  
+                      </div>
+  
+                      <div class="courses_for pt-3 " >
+                        <p> 
+                          <strong>Courses For:</strong>
+                          <small>
+                            JEE main, JEE Advance, NEET, CBSE Class.
+                          </small>
+  
+                        </p>
+  
+  
+                      </div>
+                     
+  
+  
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+  <section class="download-app" >
+    <div class="download_main container text-center shadow-lg bg-white border-5 border-white " >
+      <div class="row" >
+
+        <div class="col-6">
+
+          <div class="divide_row pt-4">
+            <div class="row" >
+
+              <div class="col-lg-1" >
+              <span class="fs-2 text-warning  " ><i class="fa-solid fa-mobile-screen-button"></i></span>
+
+
+              </div>
+              <div class="col-lg-11" >
+                <p class="h1 fw-bold " >Download App Now !</p>
+                <span>Use code <b>WELCOMEMMT</b>  and get <b>FLAT 12% OFF*</b> on your first domestic flight booking</span>
+              </div>
+
+            </div>
+
+
+
+          </div>
+         <div class="input_type d-flex" >
+          <div class="input-group mb-3 border border-1 border-black rounded-3">
+            <span class="input-group-text ">
+              <img src="assets/img/flage_india.png" alt="" width="25px" height="20px" >
+              <span class="px-2" >+91</span>
+            </span>
+            <input type="text" class="form-control shadow-none border border-0 " aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text border border-1 border-primary rounded-3 ">
+             <a href="#" class="text-primary fw-bolder " >GET LINK APP</a>
+            </span>
+          </div>
+
+
+         </div>
+
+          
+         
+        </div>
+
+
+        <div class="col-6">
+          <div class="qr-code pt-4">
+            <div class="row">
+              <div class="col-lg-6">
+               <a href="#">
+                <img src="assets/img/playstore.png" alt="_blank" width="165px" height="75px" >
+               </a>
+               <a href="#">
+                <img src="assets/img/appstore.png" alt="_blank" width="150px" height="50px" >
+               </a>
+
+              </div>
+
+              <div class="col-lg-6">
+                <img src="assets/img/qrcode.jpg" alt="_blank" width="150px" height="150px" >
+              </div>
+
+            </div>
+          
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!---all list institution-->
+  <section >
+   <div class="container shadow-lg bg-white border border-5 border-white my-3" >  
+    <div class="list_circile py-4 " >
+      <h4>All list institution</h4>
+      <div class="row pb-3 ">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">             
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >Hazaribagh</span> <br>
+             <small> <a href="#">HomeTUition - Korrah Chowk Haz</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Andhara Pradesh</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+
+      <div class="row pb-3">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >Haryana</span> <br>
+             <small> <a href="#">Homestays - Villas & Apts</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Nagaland</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Telangana</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >jharkhand</span> <br>
+             <small> <a href="#">Homestays - Villas & Apts</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >Goa</span> <br>
+             <small> <a href="#">Homestays - Villas & Apts</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >Goa</span> <br>
+             <small> <a href="#">Homestays - Villas & Apts</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4">
+          <div class="list_top" >
+           <div class="row" >
+            <div class="col-lg-2">
+              <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+            </div>
+            <div class="col-lg-10">
+             <span class="fw-bold fs-5" >Goa</span> <br>
+             <small> <a href="#">Homestays - Villas & Apts</a></small>
+            
+
+
+            </div>
+
+           </div>
+
+          </div>
+          
+
+
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+       
+        </div>
+        <div class="col-lg-4">
+          <div class="list_top" >
+            <div class="row" >
+             <div class="col-lg-2">
+               <img src="assets/img/house.PNG" alt="_blank" width="55px" height="55px" class="rounded-5" >
+             </div>
+             <div class="col-lg-10">
+              <span class="fw-bold fs-5" >Goa</span> <br>
+              <small> <a href="#">Homestays - Villas & Apts</a></small>
+             
+ 
+ 
+             </div>
+ 
+            </div>
+ 
+           </div>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+   </div>
+
+
+  </section>
+
+  <!--All Board Exam-->
+  <section class="exam_board_top" > 
+
+    <div class="container shadow-lg bg-white border-5 border-white" >
+      <h4>categeries Board</h4>
+      <div class="text-center " >
+        <div class="row mb-1 " >
+          <div class="col-lg-2 ">
+           <a href="#">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/jac_board.jpg" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" > JAC Board  </p>
+  
+            </div>
+           </a>
+            
+  
+  
+          </div>
+          <div class="col-lg-2">
+            <a href="#">
+              <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+                <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+                <p class="py-2" >CBSE Board</p>
+    
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2">Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+  
+  
+        </div>
+        <div class="row mb-1 " >
+          <div class="col-lg-2 ">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/jac_board.jpg" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" > JAC Board  </p>
+  
+            </div>
+            
+  
+  
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >CBSE Board</p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2">Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+  
+  
+        </div>
+        <div class="row mb-1 " >
+          <div class="col-lg-2 ">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/jac_board.jpg" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" > JAC Board  </p>
+  
+            </div>
+            
+  
+  
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >CBSE Board</p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2">Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="board_con shadow-lg bg-white border border-5 border-white py-2  my-2 " style="width: 100%; height: 140px;">
+              <img src="assets/img/cbse_bord.png" alt="_blank" width="50px" height="50px" class="rounded-pill" >
+              <p class="py-2" >Engineering
+                Medical 
+                </p>
+  
+            </div>
+          </div>
+  
+  
+        </div>
+  
+  
+      </div>
+
+
+    </div>
+
+    
+
+
+  </section>
+
+  <!--college and Unvirsity-->
+
+  <section class="college_Unvirsity" >
+    <div class="unversity_list" >
+      <div class="container shadow-lg bg-white border border-5 border-white" >
+        <h5>College and unversity</h5>
+        <div class="text-center" >
+          <div class="row mb-2 " >
+            <div class="col-lg-3">
+             <a href="#">
+              <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                <div class="img_box" >
+                  <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px"  class="rounded-pill" >
+
+
+                </div>
+
+                <div class="des_con" >
+                  <small class="fw-medium" >Annada College Hazaribagh</small>
+                  <br>
+                  <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+
+
+                </div>
+
+
+              </div>
+             </a>
+              
+
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+
+
+
+          </div>
+          <div class="row mb-2 " >
+            <div class="col-lg-3">
+             <a href="#">
+              <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                <div class="img_box" >
+                  <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px"  class="rounded-pill" >
+
+
+                </div>
+
+                <div class="des_con" >
+                  <small class="fw-medium" >Annada College Hazaribagh</small>
+                  <br>
+                  <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+
+
+                </div>
+
+
+              </div>
+             </a>
+              
+
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="#">
+                <div class="main_box shadow-lg bg-white border border-5 border-white py-3 " >
+                  <div class="img_box" >
+                    <img src="assets/img/jac_board.jpg" alt="_blank" width="80px" height="80px" class="rounded-pill" >
+  
+  
+                  </div>
+  
+                  <div class="des_con" >
+                    <small class="fw-medium" >Annada College Hazaribagh</small>
+                    <br>
+                    <small class="text-secondary "> <span><i class="bi bi-geo-alt-fill text-success "></i></span> Near Hazaribagh Raoad Patna</small>
+  
+  
+                  </div>
+  
+  
+                </div>
+               </a>
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <!--main slide -->
+
+  <section class="slide_tuition my-3 " >
+    <!-- Swiper -->
+  <div class="container-fluid bg-white shadow-lg border border-5 border-white py-3 " >
+    <h5>Featured Institutes</h5>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+  
+          <!---box -->
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        
+  
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4 col-lg-4 ">
+                  <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                    height="110x">
+  
+                </div>
+                <div class="col-md-8 col-lg-8 ">
+                  <div class="card-body">
+                    <span class="card-title text-uppercase">Ajay Kumar</span>
+                    <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                     <small class="text-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                     <span> Matwari, Hazaribagh</span>
+                      </small> 
+                      <br>
+                     <small >
+                     
+                        <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                          <span>5.0</span>
+                          <i class="fa-solid fa-star"></i>
+                        </button>
+                        <span class="text-secondary" > (1 Rating ).Excellent</span>
+                      
+                      </small>
+                                         
+  
+                  </div>
+  
+                </div>
+                <div class="courses" >
+                  
+                    <small class="text-danger" >
+  
+                      <span>
+                        <i class="fa-solid fa-fire"></i>
+                        4 relevant courses Open for admission
+                      </span>
+  
+                    </small>
+               
+                </div>
+  
+                <div class="d-flex" >
+                  <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-
+                  2 cat_bord border-0 px-2" >Engineering</button>
+                  <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                  
+  
+  
+                </div>
+  
+                <div class="courses_for pt-3 " >
+                  <p> 
+                    <strong>Courses For:</strong>
+                    <small>
+                      JEE main, JEE Advance, NEET, CBSE Class.
+                    </small>
+  
+                  </p>
+  
+  
+                </div>
+               
+  
+  
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+              <div class="search my-5 py-5 px-5 " >
+                <span><i class="fa-solid fa-magnifying-glass text-success fs-1 fw-bolder "></i></span>
+                <br>
+                <em>See More Institution</em>
+                <br>
+
+                <button type="button" class="btn btn-outline-success rounded-5 px-5 " >View All</button>
+
+
+              </div>
+              
+
+            </div>
+          </a>
+          <!---sweper close-->
+        </div>
+      </div>
+      <br>
+      <div class="swiper-pagination text-secondary " ></div>
+      
+    </div>
+    
+    
+
+  </div>
+
+    
+      
+
+
+  </section>
+
+
+
+
+  
+
+  <!---footer Start-->
+
+  <footer>
+    <div class="main_footer" >
+
+      <div class="input_tool text-center py-4 " >
+
+        <div class="container " >
+         <h1>  <img src="assets/img/booking_logo.png" alt="_blank" width="50px" height="50px" > StudentsPartner</h1> 
+         <em>StudentsPartner Information </em>
+
+
+        </div>
+        
+
+      </div>
+
+     <div class="container-fluid" >
+      <div class="row">
+        <div class="col-lg-3">
+          <h4>About</h4>
+          <em>You can Search of all Instituion and tuition in my Website </em>
+
+        </div>
+        <div class="col-lg-3">
+          <h4>Community</h4>
+          <ul>
+            <li> <a href="#">
+              <i class="fa-solid fa-angle-right"></i>
+              <span>Home</span>
+
+            </a> 
+           </li>
+           <li> <a href="#">
+            <i class="fa-solid fa-angle-right"></i>
+            <span>Instituion</span>
+
+          </a> 
+         </li>
+         <li> <a href="#">
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Login</span>
+
+        </a> 
+       </li>
+       <li> <a href="#">
+        <i class="fa-solid fa-angle-right"></i>
+        <span>Register</span>
+
+      </a> 
+     </li>
+            
+            
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h4>Terms & Condition</h4>
+          <ul>
+            <li> <a href="#">
+              <i class="fa-solid fa-angle-right"></i>
+              <span>Policy and Terms </span>
+
+            </a> 
+           </li>
+          
+            
+            
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h4>Socail Media</h4>
+          <ul>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="#">7o21539478</a>
+             
+               </li>
+
+               <li>
+                <span><i class="fa-solid fa-phone"></i></span>
+                <a href="#">9304703651</a>
+               
+                 </li>
+
+          </ul>
+          <div class="d-flex" >
+            <a href="#" class="text-light fs-3 px-2 " >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="text-light fs-3  px-2 " >
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="#" class="text-light fs-3  px-2 " >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="#" class="text-light fs-3  px-2 " >
+              <i class="fa-brands fa-google-plus"></i>
+            </a>
+
+
+          </div>
+         
+        </div>
+      </div>
+      
+<hr>
+<div class="Copyright">
+  <em>Copyright © 2024 All rights reserved | This template in made with by Sdbb.</em>
+
+
+</div>
+
+     </div>
+
+    </div>
+
+
+
+
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <!---sweper script-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+  var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 15,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+  </script>
+</body>
+
+</html>

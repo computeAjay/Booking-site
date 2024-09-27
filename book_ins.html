@@ -1,0 +1,1546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking Site</title>
+
+  <!--- bootstrape cdn start -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!--- bootstrape cdn end -->
+
+  <!-- font awesome cdn start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- font awesome cdn start -->
+
+  <!--external css link start -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--external css link end -->
+
+  <!--external javascript-->
+  <script src="assets/java/java.js"></script>
+
+</head>
+
+<body>
+  <!-- header navigation start-->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg border border-5 border-white bg-white fixed-top ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/booking_logo.png" alt="logo" width="40px" height="40px" >
+          
+          
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+
+            <!--search start-->
+
+           <div class="search_box d-flex " >          
+            <div class="input-group border border-2 rounded-3 mx-3 shadow-lg bg-white border-white ">
+              <span class="input-group-text border-0  bg-white " id="basic-addon1">
+                <i class="fa-solid fa-location-dot text-success "></i>
+              </span>
+              <input list="browsers" name="browser" class="form-control shadow-none  border-0 " placeholder="City" >
+              <datalist id="browsers" >
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
+              
+              <span class="input-group-text border-0 bg-white" id="basic-addon1">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control shadow-none border-0 " placeholder="Institution" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+
+           </div>
+            <!--search start end -->
+
+           
+            
+            <!--Home menu start -->
+            <li class="nav-item text-center">
+              <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-house-laptop"></i>
+               <span>Home</span>
+              </a>
+            </li>
+            <!--Home menu end -->
+              <!--Instituute menu start -->
+              <li class="nav-item text-center">
+                <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                  <i class="fa-solid fa-building-columns"></i>
+                 <span>Institute</span>
+                </a>
+              </li>
+              <!--Instituute menu end -->
+            <!--Login menu start -->
+            <li class="nav-item">
+              <a class="nav-link fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Login</span>
+              </a>
+            </li>
+            <!--Login menu end -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="fw-bolder"> 
+                  <i class="fa-solid fa-circle-user"></i>
+                   Sing
+                  </span>
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ajay Kumar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-hourglass"></i>
+                    <span>History</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span> Logout</span>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+            
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!-- header navigation end-->
+
+  <section class="search_level_ins">
+    <div class="container shadow-lg bg-white border  border-5 border-white mb-2 py-3">
+        
+        <div class="con_book pt-4 " >
+          <div class="row" >
+            <div class="col-lg-2">
+             <div class="Logo_img " >
+              <img src="assets/img/coding_img.jpg" class="rounded-pill object-fit-md-contain" width="110px" height="110px" >
+
+             </div>
+
+
+            </div>
+            <div class="col-lg-9">
+             <div class="row" >
+              <div class="col-lg-6" >
+                <div class="main_title lh-1  ">
+                  <h5>service Digital Business Boomers</h5>
+                  <p class="text-secondary" > <span><i class="bi bi-geo-alt"></i></span> Corrow Cock Hazaribag </p>
+                  
+                  <div class="btn-box" >
+                    <button type="button" class="btn btn-success btn-sm rounded-3 ">                
+                      <span>4.9 </span>
+                      <i class="fa-solid fa-star"></i>
+                    </button>
+                    (1 Rating) • Excellent
+
+                                
+                    
+                  </div>  
+                  
+                    <p class="text-danger pt-2" >14 courses open for admission</p>           
+                    
+  
+  
+                </div>
+
+              </div>
+              <div class="col-lg-6" >
+
+               <div class="location_box" >
+
+                <p class="text-end" ><a href="#" class="text-success" >
+                  <span><i class="fa-solid fa-route text-success fs-2 "></i></span></p>
+                </a>
+               </div>
+
+              </div>
+             
+                          
+                
+
+             </div>
+             
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        
+
+    </div>
+
+    <!--user booking plateform-->
+
+    <div class="container shadow-lg bg-white border  border-5 border-white mb-5 " >
+      <div class="all_list_nav" >
+        <ul class="nav nav-tabs nav-underline" id="myTab" role="tablist">
+
+          <li class="nav-item " role="presentation">
+            <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">
+              
+              <small class="offer_menu px-2" >
+                <i class="fa-solid fa-users-line"></i>
+                Profile</small>
+            </button>
+          </li>
+
+          <li class="nav-item " role="presentation">
+            <button class="nav-link " id="timetable-tab" data-bs-toggle="tab" data-bs-target="#timetable-tab-pane" type="button" role="tab" aria-controls="timetable-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >TimeTable</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="metrial" data-bs-toggle="tab" data-bs-target="#metrial-tab-pane" type="button" role="tab" aria-controls="metrial-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >Metrial</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="fee" data-bs-toggle="tab" data-bs-target="#fee-tab-pane" type="button" role="tab" aria-controls="fee-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >Courses & fee</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="faculty" data-bs-toggle="tab" data-bs-target="#faculty-tab-pane" type="button" role="tab" aria-controls="faculty-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >Faculty</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="youtube-tab" data-bs-toggle="tab" data-bs-target="#youtube-tab-pane" type="button" role="tab" aria-controls="youtube-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >YouTube</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery-tab-pane" type="button" role="tab" aria-controls="gallery-tab-pane" aria-selected="false">
+              
+              <small class="offer_menu px-2" >Result</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="booking-tab" data-bs-toggle="tab" data-bs-target="#booking-tab-pane" type="button" role="tab" aria-controls="booking-tab-pane" aria-selected="false">
+             
+              <small class="offer_menu px-2" > Booking</small>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link " id="location-tab" data-bs-toggle="tab" data-bs-target="#location-tab-pane" type="button" role="tab" aria-controls="location-tab-pane" aria-selected="false">
+             
+              <small class="offer_menu px-2" > Location</small>
+            </button>
+          </li>
+
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+
+          <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+           
+            <!--Profile User start -->
+            <div class="main_profile" >
+             
+              <div class="row" >
+                <div class="col-lg-8">
+                  <div class="about_page shadow-lg bg-white border border-white px-3 py-3 " >
+                    <h5>About</h5>
+                    <p >EDUCAFE  by -  Mr. Suraj Verma (Director)
+                      <br>
+
+                      Established : 2018                 
+                      Feature -
+                      <br>
+                      
+                       Question Bank & Model Paper Full Practice And Test
+                      Classroom ki Padhai Class Me hi Dijaiyegi
+                      Doubt Class 
+                      <br>
+                      Course Complete On Time 
+                      fee 50% Ki Chut Gareeb Student Ke Liye
+                    </p>
+
+
+
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="address shadow-lg bg-white border border-white px-3 py-3 lh-1  " >
+                    <h5>Address & Contact Details</h5>
+                    <em class="fw-medium" >
+                     <small> Near Union Bank, Musallahpur Hat, Patna, Bihar - 800006 Address</small>
+                     
+                    </em>
+                    <p class="text-end" ><a href="#" class="text-primary " >
+                      <span><i class="fa-solid fa-route"></i></span>
+                      Derection
+                    </a></p>
+
+                    <p>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="#">7021539478</a>
+                                                       
+                    </p>
+                    
+                    <p>
+                      <i class="fa-regular fa-envelope"></i>
+                      <a href="#" >ajayparshad7012@gmail.com</a>    
+                                     
+                    </p>
+
+                    <p>
+                      <i class="fa-solid fa-globe"></i>
+                      <a href="#" >https://www.sdbb.in/</a>    
+                    </p>
+
+
+
+                    <div class="social_media d-flex d-block " >
+                      <span>
+                        <a href="#"> <i class="fa-brands fa-square-whatsapp text-success fs-3 mx-1 "></i></a>
+
+                      </span>
+                      <span>
+                        <a href="#"><i class="fa-brands fa-facebook text-primary fs-3 mx-1"></i></a>
+                        
+                      </span>
+                      <span>
+                       <a href="#">
+                        <i class="fa-brands fa-instagram text-secondary fs-3 mx-1"></i>
+                       </a>
+                      </span>
+                      <span>
+                        <a href="#">
+                          <i class="fa-brands fa-linkedin text-primary fs-3 mx-1"></i>
+                        </a>
+                       
+                      </span>
+                      <span>
+                        <a href="#">
+                          <i class="fa-brands fa-square-x-twitter text-primary fs-3 mx-1"></i>
+                        </a>
+                      
+                      </span>
+
+                     
+                    </div>
+
+
+
+                  </div>
+
+                  
+                </div>
+              </div>
+
+            </div>
+
+            
+            <!--Profile User start -->
+
+       
+          </div>
+          <div class="tab-pane fade " id="timetable-tab-pane" role="tabpanel" aria-labelledby="timetable-tab" tabindex="0">
+            <!--Time table-->
+           <div class="timetable my-2 px-3  bg-white border border-5 border-white" >
+            <span class="fw-bolder" >TimeTable of Years: 2024-2025 </span>
+            <div class="row" >
+            <div class="col-lg-4">
+
+              <div class="time_box shadow-lg bg-white border border-5 border-white px-3 " >
+                <h5 class="text-center" >Commerce</h5>
+               <small class="text-warning" > Update 23/02/2024 8:45</small>
+                <hr>
+                <small>
+                  grade: B.com
+                </small>
+                <br>
+                <small>
+                  Sem: I
+                </small>
+                <br>
+                <small class="bg-info text-light px-3 " >
+                 <a href="#" class="text-light" > Start Time: 9:45pm</a>
+                </small>
+                <br>
+                <small>
+                 In the evening
+                </small>
+                <br>
+
+
+              </div>
+              
+            </div>
+            <div class="col-lg-4">
+              <div class="time_box shadow-lg bg-white border border-5 border-white px-3 " >
+                <h5 class="text-center" >Commerce</h5>
+               <small class="text-warning" > Update 23/02/2024 8:45</small>
+                <hr>
+                <small>
+                  grade: B.com
+                </small>
+                <br>
+                <small>
+                  Sem: I
+                </small>
+                <br>
+                <small class="bg-info text-light px-3 " >
+                 <a href="#" class="text-light" > Start Time: 9:45pm</a>
+                </small>
+                <br>
+                <small>
+                 In the evening
+                </small>
+                <br>
+
+
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="time_box shadow-lg bg-white border border-5 border-white px-3 " >
+                <h5 class="text-center" >Commerce</h5>
+               <small class="text-info" > Update 23/02/2024 8:45</small>
+                <hr>
+                <small>
+                  grade: B.com
+                </small>
+                <br>
+                <small>
+                  Sem: I
+                </small>
+                <br>
+                <small class="bg-info text-light px-3 " >
+                 <a href="#" class="text-light" > Start Time: 9:45pm</a>
+                </small>
+                <br>
+                <small>
+                 In the evening
+                </small>
+                <br>
+
+
+              </div>
+            </div>
+
+
+            </div>
+
+
+
+            
+
+
+           </div>
+          
+          
+          </div>
+          <div class="tab-pane fade" id="metrial-tab-pane" role="tabpanel" aria-labelledby="metrial-tab" tabindex="0">
+            <!--metrial-->
+            <div class="matrial my-3 px-3 bg-white" >
+              <span class="fw-bolder" >Matrail Download  </span>
+
+              <div class="row" >
+                <div class="col-lg-4">
+
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce (JAC)</h5>
+                    <em>B.com | I </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <small class="des_box" >
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+
+                    </small>
+                    <div class="m_download  d-grid gap-2 py-2" >
+                      <a href="#" class="btn btn-outline-success btn-sm rounded-4 " >Download</a>
+
+                    </div>
+                    
+                   </div>
+
+
+                  </div>
+
+
+                </div>
+                <div class="col-lg-4">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-2 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce (CBSE)</h5>
+                    <em>B.com | I </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <small class="des_box" >
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+
+                    </small>
+                    <div class="m_download  d-grid gap-2 py-2" >
+                      <a href="#" class="btn btn-outline-success btn-sm rounded-4 " >Download</a>
+
+                    </div>
+                    
+                   </div>
+
+
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-2 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce</h5>
+                    <em>B.com | I </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <small class="des_box" >
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
+
+                    </small>
+                    <div class="m_download  d-grid gap-2 py-2" >
+                      <a href="#" class="btn btn-outline-success btn-sm rounded-4 " >Download</a>
+
+                    </div>
+                    
+                   </div>
+
+
+                  </div>
+                </div>
+               
+
+
+              </div>
+             
+  
+  
+             </div>
+            
+
+          </div>
+
+          <div class="tab-pane fade" id="fee-tab-pane" role="tabpanel" aria-labelledby="fee-tab" tabindex="0">
+            <!--courses and fee-->
+            <div class="matrial my-3 px-3 bg-white" >
+              <span class="fw-bolder" >Courses and fee </span>
+
+              <div class="row" >
+                <div class="col-lg-4">
+
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce (JAC)</h5>
+                    <em>Class: 12th (JAC) </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <p class="des_box" >
+                      <span class="px-2" ><i class="fa-solid fa-book-open-reader"></i></span>
+                      Accountacy, Buiness Studies,Economic and 2 More
+                      <br>
+                      <span class="text-secondary" >Subjects Covered</span>
+
+
+                    </p>
+                  
+
+                    <p>                    
+                      <span class="px-2"><i class="fa-solid fa-calendar-days"></i></span>
+                      1 year 
+                      <br>
+                      <span class="text-secondary" >Courses Duration</span>
+
+                    </p>
+                   
+
+                    <p>                    
+                      <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                      6500 
+                      <span class="text-secondary" > (One time)</span>
+
+                    </p>
+                    
+                    
+                   </div>
+
+
+                  </div>
+
+
+                </div>
+                <div class="col-lg-4">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce (JAC)</h5>
+                    <em>Class: 12th (JAC) </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <p class="des_box" >
+                      <span class="px-2" ><i class="fa-solid fa-book-open-reader"></i></span>
+                      Accountacy, Buiness Studies,Economic and 2 More
+                      <br>
+                      <span class="text-secondary" >Subjects Covered</span>
+
+
+                    </p>
+                  
+
+                    <p>                    
+                      <span class="px-2"><i class="fa-solid fa-calendar-days"></i></span>
+                      1 year 
+                      <br>
+                      <span class="text-secondary" >Courses Duration</span>
+
+                    </p>
+                   
+
+                    <p>                    
+                      <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                      6500 
+                      <span class="text-secondary" > (One time)</span>
+
+                    </p>
+                    
+                    
+                   </div>
+
+
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+                    <div class="heading_box text-center " >
+                      <h5>Commerce (JAC)</h5>
+                    <em>Class: 12th (JAC) </em>
+                    <hr>
+
+                    </div>
+
+                   <div class="des" >
+
+                    <p class="des_box" >
+                      <span class="px-2" ><i class="fa-solid fa-book-open-reader"></i></span>
+                      Accountacy, Buiness Studies,Economic and 2 More
+                      <br>
+                      <span class="text-secondary" >Subjects Covered</span>
+
+
+                    </p>
+                  
+
+                    <p>                    
+                      <span class="px-2"><i class="fa-solid fa-calendar-days"></i></span>
+                      1 year 
+                      <br>
+                      <span class="text-secondary" >Courses Duration</span>
+
+                    </p>
+                   
+
+                    <p>                    
+                      <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                      6500 
+                      <span class="text-secondary" > (One time)</span>
+
+                    </p>
+                    
+                    
+                   </div>
+
+
+                  </div>
+                </div>
+               
+
+
+              </div>
+             
+  
+  
+             </div>
+            
+
+          </div>
+
+          <div class="tab-pane fade" id="faculty-tab-pane" role="tabpanel" aria-labelledby="faculty-tab" tabindex="0">
+            <!--courses and fee-->
+            <div class="matrial my-3 px-3 bg-white" >
+              <span class="fw-bolder" >Faculty and fee </span>
+
+              <div class="row mb-2" >
+                <div class="col-lg-6">
+
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+
+                    <div class="row" >
+                      <div class="col-lg-2">
+                          <img src="assets/img/ajay.png" alt="_blank" width="40px" height="40px" class="rounded-pill bg-secondary " >
+
+                      
+
+                      </div>
+                      <div class="col-lg-6">
+                        <h5>Mr Satish Kumar Singh</h5>
+                        <em>14 Yrs. Experience</em>
+
+                      </div>
+                      
+                        
+
+                      
+
+
+                    </div>
+                   
+
+                   
+
+
+                  </div>
+
+
+                </div>
+                <div class="col-lg-6">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+
+                    <div class="row" >
+                      <div class="col-lg-2">
+                          <img src="assets/img/ajay.png" alt="_blank" width="40px" height="40px" class="rounded-pill bg-secondary " >
+
+                      
+
+                      </div>
+                      <div class="col-lg-6">
+                        <h5>Mr Satish Kumar Singh</h5>
+                        <em>14 Yrs. Experience</em>
+
+                      </div>
+                      
+                        
+
+                      
+
+
+                    </div>
+                   
+
+                   
+
+
+                  </div>
+                </div>
+                
+
+              </div>
+              <div class="row" >
+                <div class="col-lg-6">
+
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+
+                    <div class="row" >
+                      <div class="col-lg-2">
+                          <img src="assets/img/ajay.png" alt="_blank" width="40px" height="40px" class="rounded-pill bg-secondary " >
+
+                      
+
+                      </div>
+                      <div class="col-lg-6">
+                        <h5>Mr Satish Kumar Singh</h5>
+                        <em>14 Yrs. Experience</em>
+
+                      </div>
+                      
+                        
+
+                      
+
+
+                    </div>
+                   
+
+                   
+
+
+                  </div>
+
+
+                </div>
+                <div class="col-lg-6">
+                  <div class="metrial_box shadow-lg bg-white border-5 bg-white px-3 py-2 rounded-3" >
+
+                    <div class="row" >
+                      <div class="col-lg-2">
+                          <img src="assets/img/ajay.png" alt="_blank" width="40px" height="40px" class="rounded-pill bg-secondary " >
+
+                      
+
+                      </div>
+                      <div class="col-lg-6">
+                        <h5>Mr Satish Kumar Singh</h5>
+                        <em>14 Yrs. Experience</em>
+
+                      </div>
+                      
+                        
+
+                      
+
+
+                    </div>
+                   
+
+                   
+
+
+                  </div>
+                </div>
+                
+
+              </div>
+             
+             
+  
+  
+             </div>
+            
+
+          </div>
+        
+          <div class="tab-pane fade" id="youtube-tab-pane" role="tabpanel" aria-labelledby="youtube-tab" tabindex="0">
+            <!---gallery instution-->
+            <div class="youtube my-5 px-3 shadow-lg bg-white border border-5 border-white pb-5" >
+              <span class="fw-bolder" >You Can see Youtube Video  </span>
+             <div class="row mb-2" >
+              <div class="col-lg-3" >
+
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+                
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+
+
+
+             </div>
+             <div class="row" >
+              <div class="col-lg-3" >
+
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+                
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+              <div class="col-lg-3" >
+                <div class="shadow-lg bg-white px-2 py-2 " >
+                  
+                  <figure class="figure">
+                    <iframe width="100%" height="150px" src="https://www.youtube.com/embed/aaNubpeBA44?si=FQR1qd9ENUjxLctT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <figcaption class="figure-caption text-secondary ">Microsoft WordPad Complete Tutorial in Hindi</figcaption>
+                  </figure>
+
+
+                </div>
+              </div>
+
+
+
+             </div>
+  
+  
+             </div>
+
+          </div>
+          <div class="tab-pane fade" id="gallery-tab-pane" role="tabpanel" aria-labelledby="gallery-tab" tabindex="0">
+            <!---gallery instution-->
+
+            <div class="gallery_THEME  px-3  bg-white border border-5 border-white" >
+              <div class="row mb-2" >
+                <span>Result</span>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+               
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-2" >
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+               
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-2" >
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+               
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="shadow-lg bg-white border border-5 border-white text-center py-3 " >
+                    <img src="assets/img/ajay.png" alt="_blank" width="90px" height="90px" class="rounded-pill bg-secondary " >
+                   
+                   <div class="des fw-bolder " >
+                    <small>Ajay kumar</small>
+                    <br>
+                    <small class="des_text text-success" >
+                      94% | I.Com 2022
+                    </small>
+
+                   </div>
+                    
+                    
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+           
+            
+
+          </div>
+
+          <div class="tab-pane fade" id="booking-tab-pane" role="tabpanel" aria-labelledby="booking-tab" tabindex="0">
+            <!---gallery instution-->
+            <div class="you my-5 px-3 shadow-lg bg-white border border-5 border-white" >
+              <span class="fw-bolder" >Commerce World Hazaribagh</span>
+              <div class="form_fill" >
+                <div class="row" >
+                  <div class="col-lg-6" >
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">First Name</label>
+                      <span class="text-info" ><small>Type here First name*</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select shadow-none border border-2" id="floatingSelect" aria-label="Floating label select example" >
+                        <option selected>In Which Class</option>
+                        <option value="1">I.Com</option>
+                        <option value="2">B.com</option>
+                        <option value="3">M.com</option>
+                      </select>
+                      <label for="floatingSelect">Select Grade/Class</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Before Study college/unversity</label>
+                      <span class="text-info" ><small>Where were you studing? *</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Mobile Number</label>
+                      <span class="text-info" ><small>Type here Mobile Number *</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Email Id</label>
+                      <span class="text-info" ><small>Type here Email id *</small> </span>
+                    </div>
+
+                    
+
+
+
+
+
+                  </div>
+
+                  <div class="col-lg-6" >
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Last name</label>
+                      <span class="text-info" ><small>Type here Last name*</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select shadow-none border border-2" id="floatingSelect" aria-label="Floating label select example" >
+                        <option selected>Select Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                      </select>
+                      <label for="floatingSelect">Gender</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Before Study in Coaching</label>
+                      <span class="text-info" ><small>Where were you Studing the Coaching? *</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none border border-2 " id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput">Other Number</label>
+                      <span class="text-info" ><small>Type here other Number *</small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name">
+                      <label for="floatingInput"> Other Email Id</label>
+                      <span class="text-info" ><small>It is not nessary </small> </span>
+                    </div>
+
+
+
+
+
+                  </div>
+
+
+                </div>
+
+                <div class="row border border-1 border-info px-2 " >
+                  <h2>personal Address</h2>
+
+                  <div class="col-lg-6" >
+                    
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" value="India" readonly >
+                      <label for="floatingInput"> Country Selected </label>
+                      <span class="text-info" ><small>Already Select </small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" >
+                      <label for="floatingInput">District</label>
+                      <span class="text-info" ><small>Distict name </small> </span>
+                    </div>
+
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                      <label for="floatingTextarea2">Address</label>
+                      <span class="text-info" ><small>Type here Address </small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="file" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" >
+                      <label for="floatingInput">Addhar Upload </label>
+                      <span class="text-info" ><small>Only PDF </small> </span>
+                    </div>
+                    
+                    
+
+
+                  </div>
+
+                  <div class="col-lg-6" >
+                    <div class="form-floating mb-3">
+                      <select class="form-select shadow-none border border-2" id="floatingSelect" aria-label="Floating label select example" >
+                        <option selected>Select State</option>
+                        <option value="1">jharkhand</option>
+                        <option value="2">Bihar</option>
+                        <option value="3">uttar Pradesh</option>
+                      </select>
+                      <label for="floatingSelect">Select State</label>
+                      <span class="text-info" ><small>State name </small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" >
+                      <label for="floatingInput">Pine code/Zipe code</label>
+                      <span class="text-info" ><small>Pine code/Zipe code </small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" >
+                      <label for="floatingInput">Addhar Number</label>
+                      <span class="text-info" ><small>Addhar Number </small> </span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="file" class="form-control shadow-none" id="floatingInput" placeholder="Type here Fist name" >
+                      <label for="floatingInput">Photo </label>
+                      <span class="text-info" ><small>Only JPG </small> </span>
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+                <div class="btn_submit my-3 " >
+                  
+                  <button type="submit" class="btn btn-info text-light btn-lg " > Submit  </button>
+
+                  
+                  <button type="reset" class="btn btn-secondary text-light btn-lg mx-5 " > Reset  </button>
+                   
+                
+                  
+
+                </div>
+
+
+
+
+              </div>
+  
+  
+             </div>
+
+          </div>
+          <div class="tab-pane fade" id="location-tab-pane" role="tabpanel" aria-labelledby="location-tab" tabindex="0">
+            <!---location instution-->
+
+            <div class="location_tab my-5 px-3 shadow-lg bg-white border border-5 border-white " >
+              <div class="row" >
+                <div class="col-lg-12">
+                  <div class="locatiuon_main" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58320.83986930186!2d85.32409315162855!3d23.993923413325135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f49c114f26548f%3A0xbd45e868bb61961f!2sHazaribagh%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1708844850670!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                  </div>
+
+
+                </div>
+                
+
+
+              </div>
+
+            </div>
+
+            
+             
+             
+
+
+            </div>
+           
+            
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  
+ 
+
+
+
+</section>
+
+  
+
+ 
+
+ 
+
+  
+
+  
+  
+
+ 
+
+  
+
+  
+
+ <!---footer Start-->
+
+ <footer>
+  <div class="main_footer" >
+
+    <div class="input_tool text-center py-4 " >
+
+      <div class="container " >
+       <h1> StudentsPartner</h1> 
+       <em>StudentsPartner Information </em>
+
+
+      </div>
+      
+
+    </div>
+
+   <div class="container-fluid" >
+    <div class="row">
+      <div class="col-lg-3">
+        <h4>About</h4>
+        <em>You can Search of all Instituion and tuition in my Website </em>
+
+      </div>
+      <div class="col-lg-3">
+        <h4>Community</h4>
+        <ul>
+          <li> <a href="#">
+            <i class="fa-solid fa-angle-right"></i>
+            <span>Home</span>
+
+          </a> 
+         </li>
+         <li> <a href="#">
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Instituion</span>
+
+        </a> 
+       </li>
+       <li> <a href="#">
+        <i class="fa-solid fa-angle-right"></i>
+        <span>Login</span>
+
+      </a> 
+     </li>
+     <li> <a href="#">
+      <i class="fa-solid fa-angle-right"></i>
+      <span>Register</span>
+
+    </a> 
+   </li>
+          
+          
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4>Terms & Condition</h4>
+        <ul>
+          <li> <a href="#">
+            <i class="fa-solid fa-angle-right"></i>
+            <span>Policy and Terms </span>
+
+          </a> 
+         </li>
+        
+          
+          
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4>Socail Media</h4>
+        <ul>
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <a href="#">7o21539478</a>
+           
+             </li>
+
+             <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="#">9304703651</a>
+             
+               </li>
+
+        </ul>
+        <div class="d-flex" >
+          <a href="#" class="text-light fs-3 px-2 " >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="text-light fs-3  px-2 " >
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a href="#" class="text-light fs-3  px-2 " >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+
+          <a href="#" class="text-light fs-3  px-2 " >
+            <i class="fa-brands fa-google-plus"></i>
+          </a>
+
+
+        </div>
+       
+      </div>
+    </div>
+    
+<hr>
+<div class="Copyright">
+<em>Copyright © 2024 All rights reserved | This template in made with by Sdbb.</em>
+
+
+</div>
+
+   </div>
+
+  </div>
+
+
+
+
+</footer>
+<!-- footer section end -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

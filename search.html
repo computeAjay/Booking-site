@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking Site</title>
+
+    <!--- bootstrape cdn start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--- bootstrape cdn end -->
+
+    <!-- font awesome cdn start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- font awesome cdn start -->
+
+    <!--external css link start -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--external css link end -->
+
+    <!--external javascript-->
+    <script src="assets/java/java.js"></script>
+
+</head>
+
+<body>
+    <!-- header navigation start-->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg border border-5 border-white bg-white fixed-top ">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/booking_logo.png" alt="logo" width="40px" height="40px" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+  
+              <!--search start-->
+  
+             <div class="search_box d-flex " >          
+              <div class="input-group border border-2 rounded-3 mx-3 shadow-lg bg-white border-white ">
+                <span class="input-group-text border-0  bg-white " id="basic-addon1">
+                  <i class="fa-solid fa-location-dot text-success "></i>
+                </span>
+                <input list="browsers" name="browser" class="form-control shadow-none  border-0 " placeholder="City" >
+                <datalist id="browsers" >
+                  <option value="Edge">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+                
+                <span class="input-group-text border-0 bg-white" id="basic-addon1">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input type="text" class="form-control shadow-none border-0 " placeholder="Institution" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+  
+  
+             </div>
+              <!--search start end -->
+  
+             
+              
+              <!--Home menu start -->
+              <li class="nav-item text-center">
+                <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                  <i class="fa-solid fa-house-laptop"></i>
+                 <span>Home</span>
+                </a>
+              </li>
+              <!--Home menu end -->
+
+                <!--Instituute menu start -->
+            <li class="nav-item text-center">
+              <a class="nav-link active fw-bolder text-secondary " aria-current="page" href="#">
+                <i class="fa-solid fa-building-columns"></i>
+               <span>Institute</span>
+              </a>
+            </li>
+            <!--Instituute menu end -->
+              <!--Login menu start -->
+              <li class="nav-item">
+                <a class="nav-link fw-bolder text-secondary " aria-current="page" href="#">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                  <span>Login</span>
+                </a>
+              </li>
+              <!--Login menu end -->
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <span class="fw-bolder"> 
+                    <i class="fa-solid fa-circle-user"></i>
+                     Sing
+                    </span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Ajay Kumar</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+  
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi bi-hourglass"></i>
+                      <span>History</span>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <span> Logout</span>
+                    </a>
+                  </li>
+  
+                </ul>
+              </li>
+  
+              
+              
+  
+            </ul>
+  
+          </div>
+        </div>
+      </nav>
+  
+    </header>
+   
+    <!-- header navigation end-->
+
+   <section class="saerch_menu_top " >
+    <div class="search_tab container-fluid  shadow bg-white border border-5 border-white " style="margin-top: 100px;" >
+      <div class="row">
+        <div class="col-lg-3">
+         <div class="checkbox_input shadow bg-white border border-5 border-white ps-3" >
+
+          <div class="flater" >
+           
+            <h5>  <span><i class="fa-solid fa-filter"></i></span> Filters</h5>
+            <hr>
+            <p class="fw-bolder" >Popular Areas</p>
+
+          </div>
+
+
+          <form>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none " type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Ananda Chowk
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Babugaon
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Bansilal Chowk
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Jhinjhariya Pool
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Kali Badi
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <hr>
+            
+            
+            <h6 > <span> <i class="fa-solid fa-book-open-reader"></i></span>  Entrance Exams</h6>
+            
+
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input border border-1 border-success shadow-none" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Matwari
+              </label>
+            </div>
+
+
+            
+
+
+
+          </form>
+
+
+
+         </div>
+
+        </div>
+        <div class="col-lg-9">
+
+          <div class="row">
+            <div class="col-lg-6">
+
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <a href="#">
+                <div class=" shadow bg-white border border-5 border-white mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4 col-lg-4 ">
+                      <img src="assets/img/coding_img.jpg" class="  py-2 px-2 object-fit-cover rounded-pill " width="110px"
+                        height="110x">
+      
+                    </div>
+                    <div class="col-md-8 col-lg-8 ">
+                      <div class="card-body">
+                        <span class="card-title text-uppercase">Ajay Kumar</span>
+                        <h5 class="card-title fw-bold text-capitalize ">Techno Vision Super-30 </h5>
+                         <small class="text-secondary">
+                          <i class="fa-solid fa-location-dot"></i>
+                         <span> Matwari, Hazaribagh</span>
+                          </small> 
+                          <br>
+                         <small >
+                         
+                            <button type="button" class="btn btn-success btn-sm rounded-3 shadow-none border-0 " style="background-color: #026C3D;" >
+                              <span>5.0</span>
+                              <i class="fa-solid fa-star"></i>
+                            </button>
+                            <span class="text-secondary" > (1 Rating ).Excellent</span>
+                          
+                          </small>
+                                             
+      
+                      </div>
+      
+                    </div>
+                    <div class="courses" >
+                      
+                        <small class="text-danger" >
+      
+                          <span>
+                            <i class="fa-solid fa-fire"></i>
+                            4 relevant courses Open for admission
+                          </span>
+      
+                        </small>
+                   
+                    </div>
+      
+                    <div class="d-flex" >
+                      <button type="button" class=" rounded-5 btn-sm mx-2 cat_bord border-0 px-2  " >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-
+                      2 cat_bord border-0 px-2" >Engineering</button>
+                      <button type="button" class="rounded-5 btn-sm mx-2 cat_bord border-0 px-2" >Engineering</button>
+                      
+      
+      
+                    </div>
+      
+                    <div class="courses_for pt-3 " >
+                      <p> 
+                        <strong>Courses For:</strong>
+                        <small>
+                          JEE main, JEE Advance, NEET, CBSE Class.
+                        </small>
+      
+                      </p>
+      
+      
+                    </div>
+                   
+      
+      
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+          
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+   </section>
+
+
+
+    
+
+
+
+    <!-- footer section -->
+
+    <footer>
+      <div class="main_footer" >
+  
+        <div class="input_tool text-center py-4 " >
+  
+          <div class="container " >
+           <h1> StudentsPartner</h1> 
+           <em>StudentsPartner Information </em>
+  
+  
+          </div>
+          
+  
+        </div>
+  
+       <div class="container-fluid" >
+        <div class="row">
+          <div class="col-lg-3">
+            <h4>About</h4>
+            <em>You can Search of all Instituion and tuition in my Website </em>
+  
+          </div>
+          <div class="col-lg-3">
+            <h4>Community</h4>
+            <ul>
+              <li> <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Home</span>
+  
+              </a> 
+             </li>
+             <li> <a href="#">
+              <i class="fa-solid fa-angle-right"></i>
+              <span>Instituion</span>
+  
+            </a> 
+           </li>
+           <li> <a href="#">
+            <i class="fa-solid fa-angle-right"></i>
+            <span>Login</span>
+  
+          </a> 
+         </li>
+         <li> <a href="#">
+          <i class="fa-solid fa-angle-right"></i>
+          <span>Register</span>
+  
+        </a> 
+       </li>
+              
+              
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4>Terms & Condition</h4>
+            <ul>
+              <li> <a href="#">
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Policy and Terms </span>
+  
+              </a> 
+             </li>
+            
+              
+              
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4>Socail Media</h4>
+            <ul>
+              <li>
+                <span><i class="fa-solid fa-phone"></i></span>
+                <a href="#">7o21539478</a>
+               
+                 </li>
+  
+                 <li>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <a href="#">9304703651</a>
+                 
+                   </li>
+  
+            </ul>
+            <div class="d-flex" >
+              <a href="#" class="text-light fs-3 px-2 " >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#" class="text-light fs-3  px-2 " >
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a href="#" class="text-light fs-3  px-2 " >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+  
+              <a href="#" class="text-light fs-3  px-2 " >
+                <i class="fa-brands fa-google-plus"></i>
+              </a>
+  
+  
+            </div>
+           
+          </div>
+        </div>
+        
+  <hr>
+  <div class="Copyright">
+    <em>Copyright © 2024 All rights reserved | This template in made with by Sdbb.</em>
+  
+  
+  </div>
+  
+       </div>
+  
+      </div>
+  
+  
+  
+  
+    </footer>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
